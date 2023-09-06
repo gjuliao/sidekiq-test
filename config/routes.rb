@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root 'pages#home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
+  post "hello", to: "pages#hello"
+
   # Defines the root path route ("/")
   # root "articles#index"
   authenticate :user, lambda { |u| u.admin? } do
